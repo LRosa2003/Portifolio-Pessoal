@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Rosa Marques de Lima | Portfólio Profissional</title>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- JavaScript Principal com defer -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação Principal -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">&lt;Letícia<span>Rosa /&gt;</span></a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Início</a></li>
+                    <li><a href="#apresentacao" class="nav-link">Apresentação</a></li>
+                    <li><a href="#perfil" class="nav-link">Perfil & Skills</a></li>
+                    <li><a href="#formacao" class="nav-link">Formação</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Botão Alternador de Tema Modo Claro / Escuro (Sol e Lua) -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema Claro/Escuro" title="Alternar Modo Claro/Escuro">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+                <!-- Botão Hamburguer para Telas Menores -->
+                <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Hero (Slogan Inspirado na Capa do LinkedIn) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="badge-tag"><i class="fas fa-laptop-code"></i> Desenvolvedora Web & Suporte TI</div>
+                
+                <!-- Slogan com Efeito de Digitação JavaScript -->
+                <h1 class="hero-slogan">
+                    <span id="typewriter-text"></span><span class="cursor">|</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Recife, PE • Transformando ideias em código e código em soluções eficientes para a web.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn btn-gradient"><i class="fas fa-code"></i> Ver Projetos</a>
+                    <a href="curriculo-leticia-rosa.pdf" download="Curriculo_Leticia_Rosa.pdf" class="btn btn-outline" id="download-cv-btn">
+                        <i class="fas fa-file-pdf"></i> Baixar CV (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Apresentação Pessoal & Foto Profissional -->
+        <section id="apresentacao" class="animate-on-scroll">
+            <div class="section-header">
+                <h2><i class="fas fa-user-circle"></i> Apresentação Pessoal</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- Espaço da Foto Profissional com Moldura Neon e Fallback -->
+                <div class="profile-photo-wrapper">
+                    <div class="photo-card">
+                        <!-- Imagem do Usuário -->
+                        <img src="foto.jpg" alt="Foto Profissional de Letícia Rosa Marques de Lima" class="profile-img" onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';">
+                        
+                        <!-- Fallback de Foto (Aparece se a foto.jpg não estiver na mesma pasta) -->
+                        <div id="photo-fallback" class="photo-fallback" style="display: none;">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>LR</span>
+                        </div>
+                    </div>
+                    <div class="photo-glow"></div>
+                    <span class="photo-badge"><i class="fas fa-check-circle"></i> Disponível para Contratação</span>
+                </div>
+
+                <div class="profile-info">
+                    <h1 class="full-name">Letícia Rosa Marques de Lima</h1>
+                    <h3 class="role-title">Desenvolvedora Web Front-End & Suporte Técnico</h3>
+                    <p class="location-tag"><i class="fas fa-map-marker-alt"></i> Recife, Pernambuco — Brasil</p>
+                    
+                    <div class="bio-box">
+                        <h4><i class="fas fa-quote-left"></i> Breve Biografia</h4>
+                        <p>
+                            Profissional em consolidação e transição contínua na área de Tecnologia da Informação. Possuo sólida formação técnica pelo <strong>SENAI</strong> e especializações recentes em Desenvolvimento Front-End pelo <strong>Projeto TRANSFORME-SE</strong> e Desenvolvimento Web Java pelo <strong>Instituto PROA</strong>.
+                        </p>
+                        <p>
+                            Combino a capacidade técnica de resolução de problemas e criação de código com uma bagagem prática em atendimento ao cliente, gestão administrativa e manipulação de dados, garantindo comunicação clara e entrega de valor.
+                        </p>
+                    </div>
+
+                    <!-- Redes Profissionais -->
+                    <div class="social-links-wrapper">
+                        <span>Conecte-se comigo:</span>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/leticia-rosa2003" target="_blank" class="social-btn linkedin" title="Perfil no LinkedIn">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/LRosa2003" target="_blank" class="social-btn github" title="Perfil no GitHub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="mailto:leticiarosa918@gmail.com" class="social-btn email" title="Enviar E-mail">
+                                <i class="fas fa-envelope"></i> E-mail
+                            </a>
+                            <a href="https://wa.me/5581985746145" target="_blank" class="social-btn whatsapp" title="Conversar no WhatsApp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Perfil Profissional (Objetivos, Área de Interesse & Competências) -->
+        <section id="perfil" class="animate-on-scroll">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Perfil Profissional</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="profile-cards-grid">
+                <!-- Objetivos de Carreira -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-compass"></i></div>
+                    <h3>Objetivos de Carreira</h3>
+                    <p>
+                        Busco ingressar como <strong>Desenvolvedora Web Junior (Front-End/Full-Stack)</strong> ou <strong>Analista de Suporte Técnico em TI</strong>. Meu objetivo é aplicar minhas competências em codificação, resolução de problemas e otimização de rotinas para agregar valor aos projetos da empresa.
+                    </p>
+                </div>
+
+                <!-- Áreas de Atuação de Interesse -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Áreas de Interesse</h3>
+                    <ul class="interest-list">
+                        <li><i class="fas fa-angle-right"></i> Desenvolvimento Web Front-End (HTML, CSS, JS)</li>
+                        <li><i class="fas fa-angle-right"></i> Desenvolvimento Java & Lógica de Programação</li>
+                        <li><i class="fas fa-angle-right"></i> Suporte Técnico, Helpdesk e Infraestrutura</li>
+                        <li><i class="fas fa-angle-right"></i> Gestão de Dados e Atendimento ao Cliente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Competências e Habilidades (Hard & Soft Skills) -->
+            <div class="skills-wrapper">
+                <h3><i class="fas fa-cogs"></i> Competências & Habilidades Técnicas</h3>
+                
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <h4><i class="fas fa-code"></i> Linguagens & Web</h4>
+                        <div class="tags-container">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Git & GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4><i class="fas fa-paint-brush"></i> Design & Prototipagem</h4>
+                        <div class="tags-container">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Canva</span>
+                            <span class="tag">CorelDraw</span>
+                            <span class="tag">Blender</span>
+                            <span class="tag">UI/UX Responsivo</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4><i class="fas fa-database"></i> Ferramentas & Produtividade</h4>
+                        <div class="tags-container">
+                            <span class="tag">Pacote Office (Excel, Word, PPT)</span>
+                            <span class="tag">Outlook & E-mail Corporativo</span>
+                            <span class="tag">Gestão de Leads</span>
+                            <span class="tag">Controle e Análise de Dados</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h4><i class="fas fa-users"></i> Habilidades Comportamentais (Soft Skills)</h4>
+                        <div class="tags-container">
+                            <span class="tag alt">Comunicação Assertiva</span>
+                            <span class="tag alt">Resolução de Problemas</span>
+                            <span class="tag alt">Trabalho em Equipe</span>
+                            <span class="tag alt">Atendimento ao Cliente</span>
+                            <span class="tag alt">Adaptabilidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Formação Acadêmica & Cursos Complementares -->
+        <section id="formacao" class="animate-on-scroll">
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica & Certificações</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="period-badge"><i class="far fa-calendar-alt"></i> 10/2021 – 08/2023</span>
+                        <h3>Técnico em Informática</h3>
+                        <h4 class="institution"><i class="fas fa-university"></i> SENAI Pernambuco</h4>
+                        <p>Formação técnica focada em lógica de programação, arquitetura e manutenção de computadores, suporte técnico ao usuário, redes de computadores e sistemas operacionais.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="period-badge"><i class="far fa-calendar-alt"></i> 07/2024 – 12/2024</span>
+                        <h3>Desenvolvedor Front-End</h3>
+                        <h4 class="institution"><i class="fas fa-certificate"></i> Projeto TRANSFORME-SE</h4>
+                        <p>Capacitação intensiva para construção de aplicações web modernas, com domínio de HTML5, CSS3, JavaScript, padrões de acessibilidade e versionamento com Git/GitHub.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="period-badge"><i class="far fa-calendar-alt"></i> 07/2024 – 12/2024</span>
+                        <h3>Desenvolvedor Web Java</h3>
+                        <h4 class="institution"><i class="fas fa-certificate"></i> Instituto PROA</h4>
+                        <p>Imersão em linguagem Java, programação orientada a objetos (POO), estruturas de dados, resolução de algoritmos e preparação comportamental para o mercado de TI.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="period-badge"><i class="far fa-calendar-alt"></i> Concluído em 2020</span>
+                        <h3>Ensino Médio Completo</h3>
+                        <h4 class="institution"><i class="fas fa-school"></i> Escola Presidente Humberto Castelo Branco - Recife/PE</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projetos Desenvolvidos (Descrição, Tecnologias e Resultados) -->
+        <section id="projetos" class="animate-on-scroll">
+            <div class="section-header">
+                <h2><i class="fas fa-laptop-code"></i> Projetos Desenvolvidos</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <div class="project-badge">Projeto Acadêmico</div>
+                    <div class="project-header">
+                        <i class="fas fa-globe project-icon"></i>
+                        <h3>Portfólio Pessoal Responsivo & Acessível</h3>
+                    </div>
+                    
+                    <p class="project-desc">
+                        Página web interativa criada como cartão de visitas profissional, contando com alternância de tema claro/escuro com persitência de dados e animações fluidas em JavaScript.
+                    </p>
+
+                    <div class="project-details">
+                        <p><strong><i class="fas fa-tools"></i> Tecnologias:</strong> HTML5, CSS3 (Variáveis & Flexbox/Grid), JavaScript (ES6+), Font Awesome.</p>
+                        <p><strong><i class="fas fa-chart-line"></i> Resultados Obtidos:</strong> Alcance de 100% de responsividade em dispositivos móveis, conformidade com acessibilidade visual e tempo de carregamento inferior a 1 segundo.</p>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/leticia-rosa2003/meu-portfolio" target="_blank" class="btn btn-sm btn-gradient">
+                            <i class="fab fa-github"></i> Código no GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card">
+                    <div class="project-badge">Repositório de Cursos</div>
+                    <div class="project-header">
+                        <i class="fas fa-folder-open project-icon"></i>
+                        <h3>Algoritmos e Exercícios em Java, Python & JS</h3>
+                    </div>
+                    
+                    <p class="project-desc">
+                        Coleção estruturada de pequenos sistemas, resoluções de problemas lógicos e exercícios práticos construídos durante os cursos do SENAI, PROA e Transforme-se.
+                    </p>
+
+                    <div class="project-details">
+                        <p><strong><i class="fas fa-tools"></i> Tecnologias:</strong> Java, Python, JavaScript, Git e Estrutura de Dados Básica.</p>
+                        <p><strong><i class="fas fa-chart-line"></i> Resultados Obtidos:</strong> Consolidação dos conceitos de POO, boas práticas de código e domínio do fluxo de versionamento de código no Git.</p>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/LRosa2003" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Explorar Repositório
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contato & Formulário Interativo -->
+        <section id="contato" class="animate-on-scroll">
+            <div class="section-header">
+                <h2><i class="fas fa-paper-plane"></i> Entre em Contato</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Informações de Contato Rápidas -->
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="label">E-mail Profissional</span>
+                            <a href="mailto:leticiarosa918@gmail.com" class="value">leticiarosa918@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <span class="label">Telefone / WhatsApp</span>
+                            <a href="https://wa.me/5581985746145" target="_blank" class="value">(81) 98574-6145</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <span class="label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/leticia-rosa2003" target="_blank" class="value">linkedin.com/in/leticia-rosa2003</a>
+                        </div>
+                    </div>
+
+                    <!-- Card para Baixar Currículo em PDF -->
+                    <div class="cv-download-card">
+                        <i class="fas fa-file-pdf cv-icon"></i>
+                        <div>
+                            <h4>Precisa do meu currículo impresso?</h4>
+                            <p>Faça o download do PDF formatado pronto para envio.</p>
+                        </div>
+                        <a href="curriculo-leticia-rosa.pdf" download="Curriculo_Leticia_Rosa.pdf" class="btn btn-sm btn-gradient">
+                            <i class="fas fa-download"></i> Baixar PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato Interativo -->
+                <form id="contact-form" class="contact-form">
+                    <h3><i class="far fa-paper-plane"></i> Enviar Mensagem Direta</h3>
+                    
+                    <div class="input-group">
+                        <label for="name">Seu Nome Completo *</label>
+                        <input type="text" id="name" placeholder="Ex: Maria Silva" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Seu E-mail de Contato *</label>
+                        <input type="email" id="email" placeholder="Ex: maria@email.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" placeholder="Ex: Oportunidade de Emprego / Projeto">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Sua Mensagem *</label>
+                        <textarea id="message" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gradient btn-full">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 • <strong>Letícia Rosa Marques de Lima</strong>. Feito com ❤️ e muito ☕.</p>
+            <p class="footer-sub">Desenvolvido com HTML5, CSS3 & JavaScript Puro.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao Topo" title="Voltar ao Topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Caixa Toast de Notificação do Formulário -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Entrarei em contato em breve.
+    </div>
+
+</body>
+</html>
